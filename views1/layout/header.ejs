@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+	    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+	<title>bakchodiz</title>
+
+</head>
+<body>
+
+
+<nav class="grey darken-3">
+	<div class="container">
+		<div class="nav-wrapper">
+			<a href="/stories" class="brand-logo center">Bakchodiz</a>
+			<a href="#" data-activities="main-menu" class="button-collapse show -on-large"><i class="fa fa-bars"></i></a>
+
+			<!-- RIGHT NAV -->
+			<ul class="right hide-on-small-only">
+				<li>
+  				 	<a href="/auth/logout"><i class="fa fa-sign-out"></i>LogOut</a>
+  				 </li>
+				
+			<% if( typeof user == 'object' && user){ %>
+  				 <li>
+  				 	<a href="/dashboard">Welcome
+  				 		<%= user.firstName %>
+  				 	</a>
+  				 </li>
+  				 <li>
+  				 	<a href="/auth/logout"><i class="fa fa-sign-out"></i>LogOut</a>
+  				 </li>
+			<% }else{ %>
+  				 <li>
+  				 	<a href="/stories"><i class="fa fa-book"></i>public Bakchodi</a>
+  				 </li>
+ 			<% } %>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+			 
+
+
